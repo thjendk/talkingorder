@@ -9,6 +9,7 @@ const ListClickItem = styled.p`
   :hover {
     font-weight: bolder;
     cursor: pointer;
+    border: 1px solid black;
   }
 `;
 
@@ -46,19 +47,19 @@ function App() {
 
   return (
     <div>
-      <h1>Talerække</h1>
+      <h1 style={{ textAlign: "center" }}>Talerække</h1>
       <form
         onSubmit={e => {
           e.preventDefault();
           handleAddJoined();
         }}
       >
-        <button type="submit">Add participant</button>
+        <button type="submit">Tilføj deltager</button>
         <input
           style={{ width: "90%" }}
           value={newParticipant}
           onChange={e => setNewParticipant(e.target.value)}
-          placeholder="Name of participant"
+          placeholder="Navn på deltager"
         />
       </form>
       <hr />
